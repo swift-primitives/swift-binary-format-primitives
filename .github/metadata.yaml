@@ -1,0 +1,9 @@
+# .github/metadata.yaml
+description: "Binary.Format.Bytes + Binary.Format.Radix — human-readable integer formatting (byte counts, hex/octal/bits) composed over swift-format-primitives."
+topics:
+  - primitives
+  - binary
+  - format
+homepage: "https://swift-institute.org"
+readme:
+  family: E
