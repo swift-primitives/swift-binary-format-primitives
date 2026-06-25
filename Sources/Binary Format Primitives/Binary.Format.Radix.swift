@@ -29,7 +29,10 @@ extension Binary.Format {
         @usableFromInline
         let showPrefix: Bool
 
+        /// The strategy governing whether a leading sign is shown for the formatted value.
         public let signStrategy: Sign.Display
+
+        /// The minimum digit width to render, zero-padded on the left, or `nil` for no padding.
         public let minWidth: Int?
 
         @usableFromInline
@@ -47,6 +50,7 @@ extension Binary.Format {
             self.minWidth = minWidth
         }
 
+        /// Creates a base-10 (decimal) radix format with the given sign and width options.
         public init(signStrategy: Sign.Display = .automatic, minWidth: Int? = nil) {
             self.radix = 10
             self.prefixString = ""
@@ -121,7 +125,7 @@ extension Binary.Format.Radix {
         var digits = String(absValue, radix: radix)
 
         // Apply zero-padding if minWidth is specified
-        if let minWidth = minWidth {
+        if let minWidth {
             let padding = max(0, minWidth - digits.count)
             digits = String(repeating: "0", count: padding) + digits
         }

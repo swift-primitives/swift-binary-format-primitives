@@ -5,7 +5,7 @@ import Testing
 
 // MARK: - Test Suites
 
-/// Tests for Binary.Format.Bytes - non-generic type using type extension pattern per [TEST-003].
+/// Tests for `Binary.Format.Bytes` byte-count formatting.
 extension Binary.Format.Bytes {
     @Suite
     struct Test {

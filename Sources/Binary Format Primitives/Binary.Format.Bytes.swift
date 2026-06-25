@@ -106,6 +106,7 @@ extension Binary.Format.Bytes {
     /// Returns a format with the specified decimal precision.
     ///
     /// - Parameter digits: Number of decimal places to display.
+    /// - Returns: A new format that renders `digits` digits after the decimal point.
     @inlinable
     public func precision(_ digits: Int) -> Self {
         .init(
@@ -170,6 +171,7 @@ extension Binary.Format.Bytes {
                 (1_000, "KB"),
                 (1, "B"),
             ]
+
         case .binary:
             thresholds = [
                 (1_125_899_906_842_624, "PiB"),

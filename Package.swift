@@ -26,8 +26,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "../swift-binary-primitives"),
-        .package(path: "../swift-format-primitives"),
+        .package(url: "https://github.com/swift-primitives/swift-binary-primitives.git", branch: "main"),
+        .package(url: "https://github.com/swift-primitives/swift-format-primitives.git", branch: "main"),
     ],
     targets: [
         .target(
